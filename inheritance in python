@@ -1,0 +1,24 @@
+
+class person:
+    def __init__(self, id, name):
+        self.name = name
+        self.id = id
+    def print_1(self):
+        print(self.name, self.id)
+class Employee(person):
+    def __init__(self, id, name, average):
+        self.average = average
+        person.__init__(self, name, id)
+
+    def print_2(self):
+        if (self.average >= 60):
+            print(self.average, "pass")
+        else:
+            print(self.average, "fail")
+
+
+a = Employee(111, "ahmad", 99)
+a.print_1()
+a.print_2()
+
+
