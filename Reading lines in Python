@@ -1,0 +1,12 @@
+file = open("/usercode/files/books.txt", "r")
+
+#your code goes here
+
+line =file.readlines()
+list=[]
+for i in line:
+	list.append(i.strip("\n"))
+for i in list:
+	print(i[0] + str(len(i)))
+
+file.close()
